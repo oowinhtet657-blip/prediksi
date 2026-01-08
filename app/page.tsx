@@ -91,7 +91,7 @@ export default function Home() {
       <div className="text-center mb-4 text-white pt-6">
         <div className="mb-3 flex justify-center">
           <img 
-            src="/images/Hening4d.png" 
+            src="/images/Hening4D.png" 
             alt="Hening4d Logo" 
             className="h-12.5 object-contain drop-shadow-lg"
             style={{ 
