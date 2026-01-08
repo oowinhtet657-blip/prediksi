@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Note: Replace YOUR_DOMAIN with your actual domain -->
+  <!-- Home Page -->
+  <url>
+    <loc>YOUR_DOMAIN</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Pasaran Pages -->
+  <url>
+    <loc>YOUR_DOMAIN/hongkong-siang</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>YOUR_DOMAIN/sydney</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>YOUR_DOMAIN/singapore</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>YOUR_DOMAIN/taiping</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>YOUR_DOMAIN/malaysia</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>YOUR_DOMAIN/etawah</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>YOUR_DOMAIN/hongkong</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>YOUR_DOMAIN/totowuhan</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

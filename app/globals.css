@@ -1,0 +1,41 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #01040c 0%, #003DA6 50%, #00264D 100%);
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container-main {
+  @apply max-w-4xl mx-auto px-4 py-8;
+}
+
+.card-calendar {
+  @apply bg-white rounded-lg shadow-2xl overflow-hidden;
+  color: #001F73;
+}
+
+.grid-numbers {
+  @apply grid gap-2;
+}
+
+.number-box {
+  @apply bg-primary text-white font-bold text-center p-2 rounded;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.875rem, 5vw, 1.25rem);
+  border: 2px solid #00B8E6;
+  box-shadow: 0 0 10px rgba(0, 184, 230, 0.3);
+}
