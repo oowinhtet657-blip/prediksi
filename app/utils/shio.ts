@@ -16,14 +16,9 @@ export const shioData = {
 export type ShioName = keyof typeof shioData;
 
 export const pasaranList = [
-  { id: "hongkong-siang", name: "Hongkong Siang", code: "HK Siang" },
-  { id: "sydney", name: "Sydney", code: "SYD" },
-  { id: "taiping", name: "Taiping", code: "TPG" },
-  { id: "singapore", name: "Singapore", code: "SGP" },
-  { id: "malaysia", name: "Malaysia", code: "MLY" },
-  { id: "etawah", name: "Etawah", code: "ETW" },
   { id: "hongkong", name: "Hongkong", code: "HK" },
-  { id: "totowuhan", name: "Totowuhan", code: "TW" },
+  { id: "sydney", name: "Sydney", code: "SYD" },
+  { id: "singapore", name: "Singapore", code: "SGP" },
 ];
 
 export function getShioByNumber(number: string): ShioName | null {

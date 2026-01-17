@@ -85,25 +85,25 @@ export default function CalendarCardClassic({ data }: CalendarCardClassicProps) 
         </div>
 
         {/* Main Content - Side by Side */}
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row">
           
           {/* Left Side - Numbers & Date */}
-          <div className="w-1/2 p-3 border-r-4 flex flex-col items-center justify-center"
+          <div className="w-full md:w-1/2 p-4 md:p-6 md:border-r-4 flex flex-col items-center justify-center border-b-4 md:border-b-0"
             style={{ borderColor: '#001F73' }}>
-            <div className="flex items-center justify-center gap-1.5 flex-wrap w-full">
+            <div className="flex items-center justify-center gap-2 md:gap-3 flex-wrap w-full">
               {/* Top 2D Label */}
-              <div className="w-full text-center mb-1.5">
-                <p className="font-black text-sm tracking-widest" style={{ color: '#001F73' }}>TOP 2D</p>
+              <div className="w-full text-center mb-2">
+                <p className="font-black text-sm md:text-base tracking-widest" style={{ color: '#001F73' }}>TOP 2D</p>
               </div>
               
               {/* Left Numbers Grid */}
-              <div className="flex flex-col gap-0.5">
+              <div className="flex flex-col gap-1 md:gap-1.5">
                 {data.leftNumbers.map((num, idx) => (
-                  <div key={idx} className="flex gap-0.5">
-                    <div className="w-8 h-8 border-2 text-white flex items-center justify-center font-black text-xs rounded" style={{ borderColor: '#001F73', backgroundColor: '#001F73' }}>
+                  <div key={idx} className="flex gap-1 md:gap-1.5">
+                    <div className="w-10 h-10 md:w-12 md:h-12 border-2 text-white flex items-center justify-center font-black text-sm md:text-base rounded" style={{ borderColor: '#001F73', backgroundColor: '#001F73' }}>
                       {num.top}
                     </div>
-                    <div className="w-8 h-8 border-2 text-white flex items-center justify-center font-black text-xs rounded" style={{ borderColor: '#001F73', backgroundColor: '#001F73' }}>
+                    <div className="w-10 h-10 md:w-12 md:h-12 border-2 text-white flex items-center justify-center font-black text-sm md:text-base rounded" style={{ borderColor: '#001F73', backgroundColor: '#001F73' }}>
                       {num.bottom}
                     </div>
                   </div>
@@ -111,20 +111,20 @@ export default function CalendarCardClassic({ data }: CalendarCardClassicProps) 
               </div>
 
               {/* Large Center Date */}
-              <div className="text-center px-1.5">
-                <div className="text-4xl font-black leading-none" style={{ color: '#001F73' }}>
+              <div className="text-center px-2 md:px-4">
+                <div className="text-4xl md:text-6xl font-black leading-none" style={{ color: '#001F73' }}>
                   {data.displayDate}
                 </div>
               </div>
 
               {/* Right Numbers Grid */}
-              <div className="flex flex-col gap-0.5">
+              <div className="flex flex-col gap-1 md:gap-1.5">
                 {data.rightNumbers.map((num, idx) => (
-                  <div key={idx} className="flex gap-0.5">
-                    <div className="w-8 h-8 border-2 text-white flex items-center justify-center font-black text-xs rounded" style={{ borderColor: '#001F73', backgroundColor: '#001F73' }}>
+                  <div key={idx} className="flex gap-1 md:gap-1.5">
+                    <div className="w-10 h-10 md:w-12 md:h-12 border-2 text-white flex items-center justify-center font-black text-sm md:text-base rounded" style={{ borderColor: '#001F73', backgroundColor: '#001F73' }}>
                       {num.top}
                     </div>
-                    <div className="w-8 h-8 border-2 text-white flex items-center justify-center font-black text-xs rounded" style={{ borderColor: '#001F73', backgroundColor: '#001F73' }}>
+                    <div className="w-10 h-10 md:w-12 md:h-12 border-2 text-white flex items-center justify-center font-black text-sm md:text-base rounded" style={{ borderColor: '#001F73', backgroundColor: '#001F73' }}>
                       {num.bottom}
                     </div>
                   </div>
@@ -133,7 +133,7 @@ export default function CalendarCardClassic({ data }: CalendarCardClassicProps) 
             </div>
 
             {/* Date Below */}
-            <div className="text-center mt-3 w-full">
+            <div className="text-center mt-2 md:mt-3 w-full">
               <p className="font-black text-xs tracking-widest" style={{ color: '#001F73' }}>
                 {data.day.toUpperCase()}
               </p>
@@ -172,16 +172,16 @@ export default function CalendarCardClassic({ data }: CalendarCardClassicProps) 
           </div>
 
           {/* Right Side - Details */}
-          <div className="w-1/2 p-3 flex flex-col justify-between">
+          <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col justify-between">
             {/* BBFS & ANGKA MAIN */}
-            <div className="grid grid-cols-1 gap-1.5 mb-2">
-              <div className="text-white p-2 rounded text-center" style={{ backgroundColor: '#001F73' }}>
-                <p className="text-xs font-bold tracking-wider mb-0.5">BBFS 5D</p>
-                <p className="text-lg font-black tracking-wider">{data.bbfs}</p>
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-3 mb-4">
+              <div className="text-white p-3 md:p-4 rounded text-center" style={{ backgroundColor: '#001F73' }}>
+                <p className="text-sm font-bold tracking-wider mb-1">BBFS 5D</p>
+                <p className="text-xl md:text-2xl font-black tracking-wider">{data.bbfs}</p>
               </div>
-              <div className="text-white p-2 rounded text-center" style={{ backgroundColor: '#001F73' }}>
-                <p className="text-xs font-bold tracking-wider mb-0.5">ANGKA MAIN</p>
-                <p className="text-lg font-black tracking-wider">{data.angkaMain}</p>
+              <div className="text-white p-3 md:p-4 rounded text-center" style={{ backgroundColor: '#001F73' }}>
+                <p className="text-sm font-bold tracking-wider mb-1">ANGKA MAIN</p>
+                <p className="text-xl md:text-2xl font-black tracking-wider">{data.angkaMain}</p>
               </div>
             </div>
 

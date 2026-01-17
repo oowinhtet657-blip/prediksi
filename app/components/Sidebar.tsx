@@ -118,8 +118,8 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp }: Sideba
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed top-4 right-4 z-[9999] p-3 rounded-lg transition-all duration-300 hover:scale-110 hamburger-btn ${isOpen ? 'menu-open' : ''}`}
-        style={{ backgroundColor: '#001F73', border: '2px solid #00B8E6' }}
+        className={`p-3 rounded-lg transition-all duration-300 hover:scale-110 hamburger-btn ${isOpen ? 'menu-open' : ''}`}
+        style={{ backgroundColor: '#001a47', border: '1px solid #00B8E6', boxShadow: '0 0 15px rgba(0, 184, 230, 0.3)' }}
         aria-label="Toggle menu"
       >
         <div className="w-5 h-5 flex flex-col justify-between">
@@ -142,7 +142,7 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp }: Sideba
         className={`fixed left-0 top-0 h-full w-64 z-40 transition-transform duration-300 ease-in-out shadow-2xl flex flex-col ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
-        style={{ backgroundColor: '#001F73' }}
+        style={{ backgroundColor: '#011431' }}
       >
         {/* Sidebar Header */}
         <div className="p-6 border-b-2 text-white flex-shrink-0" style={{ borderColor: '#00B8E6' }}>

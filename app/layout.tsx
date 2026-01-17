@@ -99,7 +99,7 @@ export default function RootLayout({
           <meta name="msvalidate.01" content={process.env.NEXT_PUBLIC_BING_VERIFICATION} />
         )}
       </head>
-      <body className="min-h-screen" style={{ background: 'linear-gradient(to bottom right, #001F73, #003DA6, #0a0e27)' }}>
+      <body className="min-h-screen" style={{ background: 'linear-gradient(135deg, #000814 0%, #001a47 50%, #000f2e 100%)' }}>
         {children}
       </body>
     </html>

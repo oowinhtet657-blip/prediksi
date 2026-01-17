@@ -86,24 +86,40 @@ export default function Home() {
 
       <HelpModal isOpen={showHelpModal} onClose={() => setShowHelpModal(false)} whatsappNumber="6281234567890" />
 
-      {!showGuideModal && !showAboutModal && !showHelpModal && <Sidebar onOpenGuide={() => setShowGuideModal(true)} onOpenAbout={() => setShowAboutModal(true)} onOpenHelp={() => setShowHelpModal(true)} />}
+      {/* Header dengan Logo dan Hamburger Button yang ikut scroll */}
+      {!showGuideModal && !showAboutModal && !showHelpModal && (
+        <div className="flex justify-center items-center mb-0 -mt-6 relative px-2">
+          {/* Logo Hening4D di tengah */}
+          <img 
+            src="/images/Hening4D.png" 
+            alt="Hening4D Logo" 
+            className="h-20 md:h-24 object-contain"
+            style={{ 
+              filter: 'drop-shadow(0 2px 4px rgba(0, 184, 230, 0.3))'
+            }}
+          />
+          {/* Hamburger Button di kanan */}
+          <div className="absolute right-2">
+            <Sidebar onOpenGuide={() => setShowGuideModal(true)} onOpenAbout={() => setShowAboutModal(true)} onOpenHelp={() => setShowHelpModal(true)} />
+          </div>
+        </div>
+      )}
 
       <div className="text-center mb-4 text-white pt-6">
         <div className="mb-3 flex justify-center">
           <img 
-            src="/images/Hening4d.png" 
-            alt="Hening4d Logo" 
-            className="h-12.5 object-contain drop-shadow-lg"
+            src="/images/bannertogel.png" 
+            alt="Banner Togel" 
+            className="w-full max-w-2xl object-contain drop-shadow-lg"
             style={{ 
               filter: 'drop-shadow(0 4px 6px rgba(1, 10, 20, 0.4)) drop-shadow(0 0 2px rgba(228, 237, 237, 0.2))',
-              
               borderRadius: '4px',
               padding: '2px'
             }}
           />
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-black mb-2">PREDIKSI TOGEL HARIAN</h1>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2 whitespace-nowrap">PREDIKSI TOGEL HARIAN</h1>
         <p style={{ color: '#00B8E6' }}>Aplikasi Hiburan & Analisis Statistik</p>
         {todayDate && (
           <p className="text-xs mt-2" style={{ color: '#FFB800' }}>
