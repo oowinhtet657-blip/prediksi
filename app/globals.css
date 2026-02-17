@@ -1,0 +1,108 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(-45deg, #FF8C00, #FFD700, #D97706, #92400E);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5), 0 10px 40px rgba(217, 119, 6, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 15px 50px rgba(217, 119, 6, 0.5);
+  }
+}
+
+.container-main {
+  @apply max-w-4xl mx-auto px-4 py-8;
+}
+
+.card-calendar {
+  @apply bg-white rounded-2xl shadow-2xl overflow-hidden;
+  color: #FF8C00;
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 248, 240, 0.96) 100%);
+  box-shadow: 0 20px 60px rgba(255, 140, 0, 0.2), 0 0 100px rgba(217, 119, 6, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card-calendar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 80px rgba(255, 140, 0, 0.3), 0 0 120px rgba(217, 119, 6, 0.2);
+}
+
+.grid-numbers {
+  @apply grid gap-2;
+}
+
+.number-box {
+  @apply bg-primary text-white font-bold text-center p-2 rounded;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.875rem, 5vw, 1.25rem);
+  background: linear-gradient(135deg, #FF006E 0%, #FB5607 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.number-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.number-box:hover::before {
+  left: 100%;
+}
+
+.number-box:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 0, 110, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,228 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import CalendarCardClassic from '@/app/components/CalendarCardClassic';
+import PasaranMenu from '@/app/components/PasaranMenu';
+import PredictionGuide from '@/app/components/PredictionGuide';
+import PredictionGuideModal from '@/app/components/PredictionGuideModal';
+import AboutModal from '@/app/components/AboutModal';
+import HelpModal from '@/app/components/HelpModal';
+import ShioTableModal from '@/app/components/ShioTableModal';
+import Sidebar from '@/app/components/Sidebar';
+import LoadingScreen from '@/app/components/LoadingScreen';
+import type { CalendarData } from '@/app/types/calendar';
+import { pasaranList } from '@/app/utils/shio';
+import { getTodayInfo, findDateIndexInData, findMatchingData } from '@/app/utils/dateUtils';
+
+export default function Home() {
+  const [calendarData, setCalendarData] = useState<CalendarData[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedPasaran, setSelectedPasaran] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [todayDate, setTodayDate] = useState<string>('');
+  const [showGuideModal, setShowGuideModal] = useState(false);
+  const [showAboutModal, setShowAboutModal] = useState(false);
+  const [showHelpModal, setShowHelpModal] = useState(false);
+  const [showShioTableModal, setShowShioTableModal] = useState(false);
+
+  // Load data kalender saat pertama kali
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const response = await fetch('/api/calendar');
+        const data = await response.json();
+        setCalendarData(data);
+        
+        // Set tanggal hari ini
+        const today = getTodayInfo();
+        setTodayDate(today.date);
+      } catch (error) {
+        console.error('Error loading data:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadData();
+  }, []);
+
+  // Auto-select hari ini dan tampilkan data sesuai tanggal realtime
+  useEffect(() => {
+    if (calendarData.length > 0 && todayDate && selectedPasaran) {
+      // Cari data untuk hari ini pada pasaran yang dipilih
+      const todayData = findMatchingData(calendarData, todayDate, selectedPasaran);
+      
+      if (todayData) {
+        // Jika ada data untuk hari ini, gunakan data tersebut
+        const filteredByPasaran = calendarData.filter(item => item.pasaran === selectedPasaran);
+        const todayIndex = filteredByPasaran.findIndex(item => item.date === todayDate);
+        setSelectedIndex(todayIndex !== -1 ? todayIndex : 0);
+      } else {
+        // Jika tidak ada data untuk hari ini, tampilkan data pertama
+        setSelectedIndex(0);
+      }
+    }
+  }, [calendarData, selectedPasaran, todayDate]);
+
+  // Filter data berdasarkan pasaran yang dipilih
+  const filteredData = selectedPasaran ? calendarData.filter(item => item.pasaran === selectedPasaran) : [];
+
+  if (isLoading) {
+    return <LoadingScreen message="Memuat data..." />;
+  }
+
+  return (
+    <main className="container-main">
+      <PredictionGuideModal isOpen={showGuideModal} onClose={() => setShowGuideModal(false)} />
+
+      <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />
+
+      <HelpModal isOpen={showHelpModal} onClose={() => setShowHelpModal(false)} whatsappNumber="6281234567890" />
+
+      <ShioTableModal isOpen={showShioTableModal} onClose={() => setShowShioTableModal(false)} />
+
+      {/* Header dengan Logo dan Hamburger Button yang ikut scroll */}
+      {!showGuideModal && !showAboutModal && !showHelpModal && (
+        <div className="flex justify-center items-center mb-0 -mt-7 relative px-2">
+          {/* Logo Hening4D di tengah */}
+          <img 
+            src="/images/Hening4D2.png" 
+            alt="Hening4D Logo" 
+            className="h-20 md:h-24 object-contain"
+            style={{ 
+             
+            }}
+          />
+          {/* Hamburger Button di kanan */}
+          <div className="absolute right-2">
+            <Sidebar onOpenGuide={() => setShowGuideModal(true)} onOpenAbout={() => setShowAboutModal(true)} onOpenHelp={() => setShowHelpModal(true)} onOpenShioTable={() => setShowShioTableModal(true)} />
+          </div>
+        </div>
+      )}
+
+      <div className="text-center mb-1 text-white pt-1">
+        <div className="mb-2 flex justify-center">
+          <img 
+            src="/images/bannertogel1.png" 
+            alt="Banner Togel" 
+            className="w-full max-w-2xl object-contain drop-shadow-lg"
+            style={{ 
+              filter: 'drop-shadow(0 4px 6px rgba(1, 10, 20, 0.4)) drop-shadow(0 0 2px rgba(228, 237, 237, 0.2))',
+              border: '2px solid #FF8C00',
+              borderRadius: '10px',
+              padding: '0px'
+            }}
+          />
+        </div>
+
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2 whitespace-nowrap">PREDIKSI TOGEL HARIAN</h1>
+        <p style={{ color: '#FF8C00', fontSize: '1.25rem', fontWeight: 'bold' }}>Aplikasi Hiburan & Analisis Statistik</p>
+        {todayDate && (
+          <p className="text-xs mt-2" style={{ color: '#F8F8F8' }}>
+             Menampilkan Prediksi untuk: {new Date(todayDate).toLocaleDateString('id-ID', { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </p>
+        )}
+      </div>
+
+      <PasaranMenu selectedPasaran={selectedPasaran || ''} onSelectPasaran={(id) => {
+        setSelectedPasaran(id);
+        setSelectedIndex(0);
+      }} />
+
+      {selectedPasaran && (
+        <>
+          {filteredData.length > 0 && (
+            <>
+              <div className="flex justify-center mb-8 p-4">
+                <CalendarCardClassic data={filteredData[selectedIndex]} />
+              </div>
+
+              <div className="flex gap-4 justify-center mb-8 flex-wrap">
+                <button
+                  onClick={() => setSelectedIndex(Math.max(0, selectedIndex - 1))}
+                  disabled={selectedIndex === 0}
+                  className="px-4 py-2 text-white font-bold rounded-lg disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-90 transition text-sm shadow-lg border-2"
+                  style={{ background: 'linear-gradient(135deg, #FF006E 0%, #FB5607 100%)', borderColor: 'rgba(255, 0, 110, 0.6)' }}
+                >
+                  ← Sebelumnya
+                </button>
+
+                <div className="flex items-center gap-2 text-white px-4 py-2 rounded-lg shadow-lg border-2 backdrop-blur-sm" style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)', borderColor: 'rgba(255, 140, 0, 0.5)' }}>
+                  <span className="font-bold text-lg">
+                    {selectedIndex + 1} / {filteredData.length}
+                  </span>
+                  {filteredData[selectedIndex] && (
+                    <span className="text-xs font-semibold" style={{ color: '#FFFFFF' }}>
+                      ({filteredData[selectedIndex].day})
+                    </span>
+                  )}
+                </div>
+
+                <button
+                  onClick={() => setSelectedIndex(Math.min(filteredData.length - 1, selectedIndex + 1))}
+                  disabled={selectedIndex === filteredData.length - 1}
+                  className="px-4 py-2 text-white font-bold rounded-lg disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-90 transition text-sm shadow-lg border-2"
+                  style={{ background: 'linear-gradient(135deg, #FF006E 0%, #FB5607 100%)', borderColor: 'rgba(255, 0, 110, 0.6)' }}
+                >
+                  Selanjutnya →
+                </button>
+
+                {todayDate && (
+                  <button
+                    onClick={() => {
+                      if (selectedPasaran) {
+                        const todayIndex = findDateIndexInData(calendarData, todayDate, selectedPasaran);
+                        setSelectedIndex(todayIndex);
+                      }
+                    }}
+                    className="px-4 py-2 text-white font-bold rounded-lg hover:opacity-90 transition shadow-lg text-sm border-2"
+                    style={{ background: 'linear-gradient(135deg, #D97706 0%, #92400E 100%)', borderColor: 'rgba(217, 119, 6, 0.5)' }}
+                  >
+                     Hari Ini
+                  </button>
+                )}
+              </div>
+
+              <div className="mb-8 px-4">
+                <div className="flex justify-center gap-2 flex-wrap max-w-2xl mx-auto">
+                  {filteredData[selectedIndex] && (
+                    <button
+                      onClick={() => {
+                        if (selectedPasaran) {
+                          const todayIndex = findDateIndexInData(calendarData, todayDate, selectedPasaran);
+                          setSelectedIndex(todayIndex);
+                        }
+                      }}
+                      className="px-6 py-3 rounded-full font-bold text-sm transition transform hover:scale-105 text-white shadow-lg border-2"
+                      style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)', borderColor: 'rgba(255, 140, 0, 0.6)', boxShadow: '0 5px 15px rgba(255, 140, 0, 0.4)' }}
+                    >
+                      {filteredData[selectedIndex].month.substring(0, 3).toUpperCase()} {filteredData[selectedIndex].displayDate}
+                    </button>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
+
+
+          {filteredData.length === 0 && (
+            <div className="text-center text-white py-12">
+              <p className="text-lg">Data untuk pasaran ini belum tersedia</p>
+              <p className="text-sm text-gray-400 mt-2">Silakan pilih pasaran lain</p>
+            </div>
+          )}
+        </>
+      )}
+
+      <div className="mt-16 text-center text-white text-sm border-t border-orange-500 pt-8 pb-8">
+        <p className="mb-2">© 2026 Kalender Prediksi - Aplikasi Hiburan & Analisis Statistik</p>
+        <p className="text-xs text-white/75">Data ditampilkan untuk tujuan analisis dan hiburan semata</p>
+      </div>
+    </main>
+  );
+}
