@@ -45,8 +45,13 @@ export default function HelpModal({ isOpen, onClose, whatsappNumber = '628123456
       <div 
         className="modal-container relative max-w-2xl w-full max-h-[90vh] overflow-hidden rounded-2xl"
         style={{
+<<<<<<< HEAD
           background: '#000000',
           border: '2px solid rgba(255, 140, 0, 0.3)',
+=======
+          background: '#052328',
+          border: '2px solid rgba(0, 255, 195, 0.3)',
+>>>>>>> d9b09ce (Initial commit)
           backdropFilter: 'blur(10px)'
         }}
       >
@@ -54,6 +59,7 @@ export default function HelpModal({ isOpen, onClose, whatsappNumber = '628123456
         <div className="overflow-y-auto max-h-[90vh] px-5 py-5 space-y-3">
           {/* Title */}
           <div className="text-center mb-4">
+<<<<<<< HEAD
             <h1 className="text-2xl font-black text-white mb-1" style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #D97706 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               BANTUAN & DUKUNGAN
             </h1>
@@ -64,6 +70,18 @@ export default function HelpModal({ isOpen, onClose, whatsappNumber = '628123456
           {/* FAQ Section */}
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#FF9500' }}>❓ Pertanyaan Umum (FAQ)</h2>
+=======
+            <h1 className="text-2xl font-black mb-1" style={{ color: '#21ae94' }}>
+              BANTUAN & DUKUNGAN
+            </h1>
+            <p className="text-xs font-medium" style={{ color: '#289682' }}>Hubungi tim support kami</p>
+            <div className="w-12 h-0.5 mx-auto mt-2 rounded-full" style={{ background: 'linear-gradient(90deg, #00FFC3 0%, #00BFA3 100%)' }}></div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 195, 0.1)', borderColor: 'rgba(0, 255, 195, 0.3)' }}>
+            <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#00FFC3' }}>❓ Pertanyaan Umum (FAQ)</h2>
+>>>>>>> d9b09ce (Initial commit)
             <div className="space-y-2 text-xs text-slate-300">
               <div>
                 <p className="font-bold text-white">Bagaimana cara menggunakan HENING4D?</p>
@@ -85,6 +103,7 @@ export default function HelpModal({ isOpen, onClose, whatsappNumber = '628123456
           </div>
 
           {/* Petunjuk Section */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#FF9500' }}>📋 Petunjuk Penggunaan</h2>
             <ol className="space-y-1 text-xs text-slate-300">
@@ -93,12 +112,27 @@ export default function HelpModal({ isOpen, onClose, whatsappNumber = '628123456
               <li><strong style={{ color: '#FF9500' }}>3.</strong> Lihat prediksi hari ini atau sebelumnya</li>
               <li><strong style={{ color: '#FF9500' }}>4.</strong> Gunakan prev/next untuk hari lain</li>
               <li><strong style={{ color: '#FF9500' }}>5.</strong> Baca panduan untuk memahami elemen prediksi</li>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 195, 0.1)', borderColor: 'rgba(0, 255, 195, 0.3)' }}>
+            <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#00FFC3' }}>Petunjuk Penggunaan</h2>
+            <ol className="space-y-1 text-xs text-slate-300">
+              <li><strong style={{ color: '#00FFC3' }}>1.</strong> Pilih pasaran di halaman utama</li>
+              <li><strong style={{ color: '#00FFC3' }}>2.</strong> Pilih pasaran togel yang dituju</li>
+              <li><strong style={{ color: '#00FFC3' }}>3.</strong> Lihat prediksi hari ini atau sebelumnya</li>
+              <li><strong style={{ color: '#00FFC3' }}>4.</strong> Gunakan prev/next untuk hari lain</li>
+              <li><strong style={{ color: '#00FFC3' }}>5.</strong> Baca panduan untuk memahami elemen prediksi</li>
+>>>>>>> d9b09ce (Initial commit)
             </ol>
           </div>
 
           {/* Troubleshooting Section */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#FF9500' }}>🔧 Troubleshooting</h2>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 195, 0.1)', borderColor: 'rgba(0, 255, 195, 0.3)' }}>
+            <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#00FFC3' }}> Troubleshooting</h2>
+>>>>>>> d9b09ce (Initial commit)
             <div className="space-y-2 text-xs text-slate-300">
               <div>
                 <p className="font-bold text-white">Aplikasi loading lama?</p>
@@ -116,8 +150,13 @@ export default function HelpModal({ isOpen, onClose, whatsappNumber = '628123456
           </div>
 
           {/* Contact Support */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#FF9500' }}>💬 Hubungi Tim Support</h2>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 195, 0.1)', borderColor: 'rgba(0, 255, 195, 0.3)' }}>
+            <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#00FFC3' }}>Hubungi Tim Support</h2>
+>>>>>>> d9b09ce (Initial commit)
             <p className="text-xs text-slate-300 mb-3">
               Untuk pertanyaan lebih lanjut, hubungi tim kami melalui WhatsApp.
             </p>
@@ -126,16 +165,27 @@ export default function HelpModal({ isOpen, onClose, whatsappNumber = '628123456
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3 py-2 rounded-lg font-bold text-black text-xs transition-all duration-300 hover:scale-105"
+<<<<<<< HEAD
               style={{ backgroundColor: '#FF9500' }}
             >
               <span>💬</span>
+=======
+              style={{ backgroundColor: '#22a64e' }}
+            >
+              <span></span>
+>>>>>>> d9b09ce (Initial commit)
               <span>Chat WhatsApp</span>
             </a>
           </div>
 
           {/* Info Tambahan */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#FF9500' }}>ℹ️ Informasi Tambahan</h2>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 195, 0.1)', borderColor: 'rgba(0, 255, 195, 0.3)' }}>
+            <h2 className="text-sm font-bold text-white mb-2" style={{ color: '#00FFC3' }}>ℹ Informasi Tambahan</h2>
+>>>>>>> d9b09ce (Initial commit)
             <ul className="text-xs text-slate-300 space-y-1">
               <li>✓ HENING4D tersedia di web dan accessible dari berbagai perangkat</li>
               <li>✓ Data diperbaharui berkala mengikuti jadwal hasil togel</li>
@@ -145,8 +195,13 @@ export default function HelpModal({ isOpen, onClose, whatsappNumber = '628123456
           </div>
 
           {/* Divider */}
+<<<<<<< HEAD
           <div className="mt-3 pt-3 border-t" style={{ borderColor: 'rgba(255, 140, 0, 0.2)' }}>
             <p className="text-xs text-center" style={{ color: '#FF8C00' }}>
+=======
+          <div className="mt-3 pt-3 border-t" style={{ borderColor: 'rgba(0, 255, 195, 0.1)' }}>
+            <p className="text-xs text-center" style={{ color: '#00FFC3' }}>
+>>>>>>> d9b09ce (Initial commit)
               Siap membantu Anda 24/7
             </p>
           </div>

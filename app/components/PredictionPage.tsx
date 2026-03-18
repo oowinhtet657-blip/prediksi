@@ -77,7 +77,7 @@ export default function PredictionPage({ pasaranId, pasaranName }: PredictionPag
         <div className="flex justify-between items-center mb-0 -mt-4 px-2 relative">
           {/* Back Button */}
           <Link href="/" className="p-2.5 rounded-lg transition-all duration-300 hover:scale-110"
-            style={{ background: 'linear-gradient(135deg, #FF8C00, #FFD700)', border: '2px solid rgba(255, 140, 0, 0.6)' }}>
+            style={{ background: 'linear-gradient(135deg, rgba(9, 59, 54, 0.85) 0%, rgba(35, 206, 189, 0.9) 100%)', borderColor: 'rgba(0, 255, 234, 0.5)' }}>
             <svg className="w-5 h-5" style={{ color: '#FFFFFF' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -85,8 +85,8 @@ export default function PredictionPage({ pasaranId, pasaranName }: PredictionPag
 
           {/* Logo di tengah */}
           <img 
-            src="/images/Hening4D2.webp" 
-            alt="Hening4D Logo" 
+            src="/images/logohoreg.webp" 
+            alt="Horeg22 Logo" 
             className="h-20 md:h-24 object-contain absolute left-1/2 transform -translate-x-1/2"/>
 
           {/* Hamburger Button di kanan */}
@@ -98,9 +98,9 @@ export default function PredictionPage({ pasaranId, pasaranName }: PredictionPag
 
       <div className="text-center mb-4 text-white pt-6">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2">PREDIKSI TOGEL {pasaranName.toUpperCase()}</h1>
-        <p style={{ color: '#FF8C00', fontWeight: 'bold' }}>Aplikasi Hiburan & Analisis Statistik</p>
+        <p style={{ color: '#3c8a81', fontWeight: 'bold' }}>Aplikasi Hiburan & Analisis Statistik</p>
         {todayDate && (
-          <p className="text-xs mt-2" style={{ color: '#FFFFFF' }}>
+          <p className="text-xs mt-2" style={{ color: '#7ab2ae' }}>
             Menampilkan Prediksi untuk: {new Date(todayDate).toLocaleDateString('id-ID', { 
               weekday: 'long', 
               year: 'numeric', 
@@ -122,17 +122,17 @@ export default function PredictionPage({ pasaranId, pasaranName }: PredictionPag
                 onClick={() => setSelectedIndex(Math.max(0, selectedIndex - 1))}
                 disabled={selectedIndex === 0}
                 className="px-4 py-2 text-white font-bold rounded-lg disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-80 transition text-sm"
-                style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)' }}
+                style={{ background: '#198f95' }}
               >
                 ← Sebelumnya
               </button>
 
-              <div className="flex items-center gap-2 text-white px-4 py-2 rounded-lg shadow-lg border backdrop-blur-sm" style={{ background: 'linear-gradient(to right, #FF8C00, #FFD700)', borderColor: 'rgba(255, 140, 0, 0.5)' }}>
+              <div className="flex items-center gap-2 text-white px-4 py-2 rounded-lg shadow-lg border backdrop-blur-sm" style={{ background: 'linear-gradient(135deg, rgba(9, 59, 54, 0.85) 0%, rgba(35, 206, 189, 0.9) 100%)', borderColor: 'rgba(0, 255, 234, 0.5)' }}>
                 <span className="font-bold text-lg">
                   {selectedIndex + 1} / {filteredData.length}
                 </span>
                 {filteredData[selectedIndex] && (
-                  <span className="text-xs font-semibold" style={{ color: '#FFFFFF' }}>
+                  <span className="text-xs font-semibold" style={{ color: '#ffffff' }}>
                     ({filteredData[selectedIndex].day})
                   </span>
                 )}
@@ -142,7 +142,7 @@ export default function PredictionPage({ pasaranId, pasaranName }: PredictionPag
                 onClick={() => setSelectedIndex(Math.min(filteredData.length - 1, selectedIndex + 1))}
                 disabled={selectedIndex === filteredData.length - 1}
                 className="px-4 py-2 text-white font-bold rounded-lg disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-80 transition text-sm"
-                style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)' }}
+                style={{ background: 'linear-gradient(135deg, rgba(9, 59, 54, 0.85) 0%, rgba(35, 206, 189, 0.9) 100%)' }}
               >
                 Selanjutnya →
               </button>
@@ -154,7 +154,7 @@ export default function PredictionPage({ pasaranId, pasaranName }: PredictionPag
                     setSelectedIndex(todayIndex);
                   }}
                   className="px-4 py-2 text-white font-bold rounded-lg hover:opacity-80 transition shadow-lg text-sm border-2"
-                  style={{ background: 'linear-gradient(135deg, #D97706 0%, #92400E 100%)', borderColor: 'rgba(217, 119, 6, 0.5)' }}
+                  style={{ background: 'linear-gradient(135deg, rgba(9, 59, 54, 0.85) 0%, rgba(35, 206, 189, 0.9) 100%)', borderColor: 'rgba(6, 217, 185, 0.5)' }}
                 >
                   Hari Ini
                 </button>
@@ -170,7 +170,7 @@ export default function PredictionPage({ pasaranId, pasaranName }: PredictionPag
                       setSelectedIndex(todayIndex);
                     }}
                     className="px-6 py-3 rounded-full font-bold text-sm transition transform hover:scale-105 text-white shadow-lg border-2"
-                    style={{ background: 'linear-gradient(to right, #FF8C00, #FFD700)', borderColor: 'rgba(255, 140, 0, 0.6)' }}
+                    style={{ background: 'linear-gradient(135deg, rgba(9, 59, 54, 0.85) 0%, rgba(35, 206, 189, 0.9) 100%)', borderColor: 'rgba(6, 217, 185, 0.5)' }}
                   >
                     {filteredData[selectedIndex].month.substring(0, 3).toUpperCase()} {filteredData[selectedIndex].displayDate}
                   </button>

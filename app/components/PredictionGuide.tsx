@@ -9,6 +9,7 @@ export default function PredictionGuide({ isOpen = true, onClose }: PredictionGu
   if (!isOpen) return null;
 
   return (
+<<<<<<< HEAD
     <div className="w-full max-w-2xl mx-auto">
       <div className="border rounded-2xl p-5 backdrop-blur-xl" style={{ background: '#000000', borderColor: 'rgba(255, 140, 0, 0.3)' }}>
         
@@ -18,14 +19,41 @@ export default function PredictionGuide({ isOpen = true, onClose }: PredictionGu
           <p className="text-xs font-medium" style={{ color: '#FF8C00' }}>Memahami setiap elemen prediksi dengan mudah</p>
           <div className="w-16 h-0.5 mx-auto mt-2 rounded-full" style={{ background: 'linear-gradient(90deg, #FF8C00 0%, #D97706 100%)' }}></div>
         </div>
+=======
+    <div className="w-full max-w-2xl mx-auto relative">
+      {/* Close Button */}
+      {onClose && (
+        <button
+          onClick={onClose}
+          className="absolute top-0 right-0 w-4 h-8 flex items-center justify-center rounded-full text-white bg-[#198f95] hover:bg-[#146c6f] transition text-xl font-bold shadow-lg z-20"
+          aria-label="Tutup Panduan"
+        >
+          ×
+        </button>
+      )}
+      <div className="border rounded-2xl p-5 backdrop-blur-xl" style={{ background: '#144146', borderColor: 'rgba(0, 255, 234, 0.3)' }}>
+        
+        {/* Title */}
+        <div className="text-center mb-5">
+          <h2 className="text-2xl font-black mb-1" style={{ color: '#2abaac' }}>PANDUAN PENGGUNAAN PREDIKSI</h2>
+          <p className="text-xs font-medium" style={{ color: '#49a091' }}>Memahami setiap elemen prediksi dengan mudah</p>
+          <div className="w-16 h-0.5 mx-auto mt-2 rounded-full" style={{ background: 'linear-gradient(90deg, #00ffd0 0%, #06d9b2 100%)' }}></div>
+        </div>  
+>>>>>>> d9b09ce (Initial commit)
 
         {/* Grid Panduan - Compact */}
         <div className="space-y-3">
           
           {/* 1. BBFS 5D */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <div className="flex items-start gap-2 mb-2">
               <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)' }}>1</div>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 234, 0.1)', borderColor: 'rgba(0, 255, 234, 0.3)' }}>
+            <div className="flex items-start gap-2 mb-2">
+              <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #00FFEA 0%, #25b99c 100%)' }}>1</div>
+>>>>>>> d9b09ce (Initial commit)
               <h3 className="text-sm font-bold text-white">BBFS 5D</h3>
             </div>
             <p className="text-slate-100 text-xs leading-tight">
@@ -34,9 +62,15 @@ export default function PredictionGuide({ isOpen = true, onClose }: PredictionGu
           </div>
 
           {/* 2. ANGKA MAIN */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <div className="flex items-start gap-2 mb-2">
               <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)' }}>2</div>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 234, 0.1)', borderColor: 'rgba(0, 255, 234, 0.3)' }}>
+            <div className="flex items-start gap-2 mb-2">
+              <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #00FFEA 0%, #25b99c 100%)' }}>2</div>
+>>>>>>> d9b09ce (Initial commit)
               <h3 className="text-sm font-bold text-white">ANGKA MAIN</h3>
             </div>
             <p className="text-slate-100 text-xs leading-tight">
@@ -45,9 +79,15 @@ export default function PredictionGuide({ isOpen = true, onClose }: PredictionGu
           </div>
 
           {/* 3. SHIO TERHUBUNG */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <div className="flex items-start gap-2 mb-2">
               <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)' }}>3</div>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 234, 0.1)', borderColor: 'rgba(0, 255, 234, 0.3)' }}>
+            <div className="flex items-start gap-2 mb-2">
+              <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #00FFEA 0%, #25b99c 100%)' }}>3</div>
+>>>>>>> d9b09ce (Initial commit)
               <h3 className="text-sm font-bold text-white">SHIO TERHUBUNG</h3>
             </div>
             <p className="text-slate-100 text-xs leading-tight">
@@ -56,9 +96,15 @@ export default function PredictionGuide({ isOpen = true, onClose }: PredictionGu
           </div>
 
           {/* 4. LEFT & RIGHT NUMBERS */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <div className="flex items-start gap-2 mb-2">
               <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)' }}>4</div>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 234, 0.1)', borderColor: 'rgba(0, 255, 234, 0.3)' }}>
+            <div className="flex items-start gap-2 mb-2">
+              <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #00FFEA 0%, #25b99c 100%)' }}>4</div>
+>>>>>>> d9b09ce (Initial commit)
               <h3 className="text-sm font-bold text-white">LEFT & RIGHT NUMBERS</h3>
             </div>
             <p className="text-slate-100 text-xs leading-tight">
@@ -67,9 +113,15 @@ export default function PredictionGuide({ isOpen = true, onClose }: PredictionGu
           </div>
 
           {/* 5. FORMULA TABLE */}
+<<<<<<< HEAD
           <div className="rounded-lg p-3 border" style={{ background: 'rgba(255, 149, 0, 0.1)', borderColor: 'rgba(255, 149, 0, 0.3)' }}>
             <div className="flex items-start gap-2 mb-2">
               <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF8C00 0%, #FFD700 100%)' }}>5</div>
+=======
+          <div className="rounded-lg p-3 border" style={{ background: 'rgba(0, 255, 234, 0.1)', borderColor: 'rgba(0, 255, 234, 0.3)' }}>
+            <div className="flex items-start gap-2 mb-2">
+              <div className="text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #00FFEA 0%, #25b99c 100%)' }}>5</div>
+>>>>>>> d9b09ce (Initial commit)
               <h3 className="text-sm font-bold text-white">FORMULA TABLE</h3>
             </div>
             <p className="text-slate-100 text-xs leading-tight">
@@ -79,8 +131,13 @@ export default function PredictionGuide({ isOpen = true, onClose }: PredictionGu
         </div>
 
         {/* Disclaimer & Tips */}
+<<<<<<< HEAD
         <div className="mt-4 pt-4 border-t" style={{ borderColor: 'rgba(255, 140, 0, 0.2)' }}>
           <p className="text-xs text-center" style={{ color: '#FF8C00' }}>
+=======
+        <div className="mt-4 pt-4 border-t" style={{ borderColor: 'rgba(0, 255, 234, 0.2)' }}>
+          <p className="text-xs text-center" style={{ color: '#36bca1' }}>
+>>>>>>> d9b09ce (Initial commit)
             ⚠️ Untuk hiburan dan analisis statistik. Kombinasikan semua elemen untuk hasil terbaik.
           </p>
         </div>

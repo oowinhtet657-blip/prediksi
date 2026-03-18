@@ -10,6 +10,7 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 body {
   background: linear-gradient(-45deg, #FF8C00, #FFD700, #D97706, #92400E);
   background-size: 400% 400%;
@@ -19,6 +20,19 @@ body {
   background-attachment: fixed;
 }
 
+=======
+:root {
+  --bg-elevated: #144146;
+  --bg-surface: #052328;
+  --button-color: #198f95;
+}
+
+body {
+  background: var(--bg-surface, #052328);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-attachment: fixed;
+>>>>>>> d9b09ce (Initial commit)
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -54,11 +68,19 @@ body {
 }
 
 .card-calendar {
+<<<<<<< HEAD
   @apply bg-white rounded-2xl shadow-2xl overflow-hidden;
   color: #FF8C00;
   border: 2px solid rgba(255, 140, 0, 0.3);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 248, 240, 0.96) 100%);
   box-shadow: 0 20px 60px rgba(255, 140, 0, 0.2), 0 0 100px rgba(217, 119, 6, 0.1);
+=======
+  @apply rounded-2xl shadow-2xl overflow-hidden;
+  color: #144146;
+  border: 2px solid #14414633;
+  background: var(--bg-elevated, #144146);
+  box-shadow: 0 20px 60px #14414633, 0 0 100px #1441461A;
+>>>>>>> d9b09ce (Initial commit)
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
@@ -73,15 +95,25 @@ body {
 }
 
 .number-box {
+<<<<<<< HEAD
   @apply bg-primary text-white font-bold text-center p-2 rounded;
+=======
+  @apply text-white font-bold text-center p-2 rounded;
+>>>>>>> d9b09ce (Initial commit)
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: clamp(0.875rem, 5vw, 1.25rem);
+<<<<<<< HEAD
   background: linear-gradient(135deg, #FF006E 0%, #FB5607 100%);
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 20px rgba(255, 0, 110, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2);
+=======
+  background: var(--button-color, #198f95);
+  border: 2px solid #198f9533;
+  box-shadow: 0 0 20px #198f9540, inset 0 0 10px #ffffff33;
+>>>>>>> d9b09ce (Initial commit)
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -105,4 +137,8 @@ body {
 .number-box:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 10px 30px rgba(255, 0, 110, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3);
+<<<<<<< HEAD
 }
+=======
+}}
+>>>>>>> d9b09ce (Initial commit)

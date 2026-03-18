@@ -107,11 +107,21 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp, onOpenSh
 
         .hamburger-btn {
           transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+<<<<<<< HEAD
           box-shadow: 0 4px 15px rgba(255, 149, 0, 0.3);
         }
 
         .hamburger-btn:hover {
           box-shadow: 0 6px 20px rgba(255, 149, 0, 0.5);
+=======
+          /* box-shadow dihilangkan */
+          box-shadow: none;
+        }
+
+        .hamburger-btn:hover {
+          /* box-shadow dihilangkan */
+          box-shadow: none;
+>>>>>>> d9b09ce (Initial commit)
         }
 
         .hamburger-btn.menu-open .hamburger-top {
@@ -139,21 +149,36 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp, onOpenSh
         }
 
         .sidebar-modern {
+<<<<<<< HEAD
           background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(25, 15, 5, 0.95) 100%);
+=======
+          background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(5, 22, 25, 0.95) 100%);
+>>>>>>> d9b09ce (Initial commit)
           backdrop-filter: blur(10px);
         }
 
         .menu-item-modern {
+<<<<<<< HEAD
           background: linear-gradient(135deg, rgba(255, 149, 0, 0.9) 0%, rgba(255, 165, 0, 0.85) 100%);
           transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
           box-shadow: 0 4px 15px rgba(255, 149, 0, 0.2);
+=======
+          background: linear-gradient(135deg, rgba(9, 59, 52, 0.85) 0%, rgba(35, 138, 158, 0.9) 100%);
+          transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+          box-shadow: none;
+>>>>>>> d9b09ce (Initial commit)
           border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .menu-item-modern:hover {
           transform: translateY(-3px);
+<<<<<<< HEAD
           box-shadow: 0 8px 25px rgba(255, 149, 0, 0.35);
           background: linear-gradient(135deg, rgba(255, 165, 0, 0.95) 0%, rgba(255, 180, 0, 0.9) 100%);
+=======
+          box-shadow: none;
+          background: linear-gradient(135deg, rgba(9, 59, 52, 0.85) 0%, rgba(35, 158, 107, 0.9) 100%);
+>>>>>>> d9b09ce (Initial commit)
         }
       `}</style>
 
@@ -161,7 +186,11 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp, onOpenSh
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`p-3 rounded-xl transition-all duration-300 hover:scale-110 hamburger-btn ${isOpen ? 'menu-open' : ''}`}
+<<<<<<< HEAD
         style={{ backgroundColor: '#FF9500', border: '2px solid rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(10px)' }}
+=======
+        style={{ background: 'linear-gradient(135deg, rgba(9, 59, 52, 0.85) 0%, rgba(35, 138, 158, 0.9) 100%)', border: '2px solid #198f9533', backdropFilter: 'blur(10px)' }}
+>>>>>>> d9b09ce (Initial commit)
         aria-label="Toggle menu"
       >
         <div className="w-5 h-4 flex flex-col justify-between">
@@ -170,26 +199,37 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp, onOpenSh
           <span className="hamburger-bottom w-full h-0.5 bg-white block rounded-full"></span>
         </div>
       </button>
+<<<<<<< HEAD
 
       {/* Sidebar Overlay */}
+=======
+>>>>>>> d9b09ce (Initial commit)
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"
           onClick={() => setIsOpen(false)}
         />
       )}
+<<<<<<< HEAD
 
       {/* Sidebar */}
+=======
+>>>>>>> d9b09ce (Initial commit)
       <div
         className={`fixed left-0 top-0 h-full w-72 z-50 transition-transform duration-400 ease-in-out shadow-2xl flex flex-col sidebar-modern ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
+<<<<<<< HEAD
         style={{ borderRight: '2px solid rgba(255, 149, 0, 0.2)' }}
+=======
+        style={{ borderRight: '2px solid rgba(0, 255, 251, 0.2)' }}
+>>>>>>> d9b09ce (Initial commit)
       >
         {/* Sidebar Header - Modern Orange */}
         <div 
           className="p-8 text-white flex-shrink-0 relative overflow-hidden"
           style={{ 
+<<<<<<< HEAD
             background: 'linear-gradient(135deg, #FF9500 0%, #FF8C00 100%)',
             boxShadow: '0 8px 32px rgba(255, 149, 0, 0.3)'
           }}
@@ -198,6 +238,14 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp, onOpenSh
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
           <h2 className="text-2xl font-black text-white mb-1 relative z-10">MENU</h2>
           <p className="text-sm font-semibold text-white/90 relative z-10">Navigasi Aplikasi</p>
+=======
+            background: 'linear-gradient(135deg, rgba(9, 59, 51, 0.85) 0%, rgba(46, 171, 176, 0.9) 100%)',
+            boxShadow: 'none'
+          }}
+        >
+          <h2 className="text-2xl font-black text-white mb-1 relative z-10">MENU</h2>
+          <p className="text-sm font-semibold text-white/90 relative z-10">Horeg22 Prediksi</p>
+>>>>>>> d9b09ce (Initial commit)
         </div>
 
         {/* Menu Items - Scrollable */}
@@ -207,6 +255,10 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp, onOpenSh
               key={idx}
               onClick={item.action}
               className="menu-item-modern w-full text-left px-5 py-4 rounded-2xl font-bold text-sm transition-all duration-300 text-black shadow-lg"
+<<<<<<< HEAD
+=======
+              style={{ backgroundColor: '#198f95', color: '#fff' }}
+>>>>>>> d9b09ce (Initial commit)
             >
               {item.label}
             </button>
@@ -217,8 +269,13 @@ export default function Sidebar({ onOpenGuide, onOpenAbout, onOpenHelp, onOpenSh
         <div 
           className="p-5 border-t text-white text-center flex-shrink-0"
           style={{ 
+<<<<<<< HEAD
             borderColor: 'rgba(255, 149, 0, 0.3)',
             background: 'linear-gradient(135deg, rgba(30, 20, 10, 0.8) 0%, rgba(15, 10, 5, 0.95) 100%)',
+=======
+            borderColor: 'rgba(0, 255, 204, 0.3)',
+            background: 'linear-gradient(135deg, rgba(10, 30, 30, 0.8) 0%, rgba(5, 14, 15, 0.95) 100%)',
+>>>>>>> d9b09ce (Initial commit)
             backdropFilter: 'blur(10px)'
           }}
         >

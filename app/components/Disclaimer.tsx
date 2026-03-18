@@ -19,7 +19,11 @@ export default function Disclaimer({ showDetailed = false }: DisclaimerProps) {
       <button
         onClick={() => setIsVisible(false)}
         className="absolute top-4 right-4 text-white/60 hover:text-white transition text-xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:scale-110"
+<<<<<<< HEAD
         style={{ background: 'rgba(255, 140, 0, 0.3)', border: '1px solid rgba(255, 140, 0, 0.5)' }}
+=======
+        style={{ background: '#198f95', border: '1px solid #198f9533', color: '#fff' }}
+>>>>>>> d9b09ce (Initial commit)
         aria-label="Close disclaimer"
       >
         ×

@@ -99,7 +99,11 @@ export default function RootLayout({
           <meta name="msvalidate.01" content={process.env.NEXT_PUBLIC_BING_VERIFICATION} />
         )}
       </head>
+<<<<<<< HEAD
       <body className="min-h-screen" suppressHydrationWarning style={{ background: 'linear-gradient(177deg, #000000 0%, #2c2c2c 50%, #000000 100%)' }}>
+=======
+      <body className="min-h-screen" suppressHydrationWarning style={{ background: 'var(--bg-surface, #052328)' }}>
+>>>>>>> d9b09ce (Initial commit)
         {children}
       </body>
     </html>

@@ -84,10 +84,17 @@ export default function Home() {
       {/* Header dengan Logo dan Hamburger Button yang ikut scroll */}
       {!showGuideModal && !showAboutModal && !showHelpModal && (
         <div className="flex justify-center items-center mb-0 -mt-7 relative px-2">
+<<<<<<< HEAD
           {/* Logo Hening4D di tengah */}
           <img 
             src="/images/Hening4D2.png" 
             alt="Hening4D Logo" 
+=======
+          {/* Logo Horeg22 di tengah */}
+          <img 
+            src="/images/logohoreg.webp" 
+            alt="Horeg22 Logo" 
+>>>>>>> d9b09ce (Initial commit)
             className="h-20 md:h-24 object-contain"
             style={{ 
              
@@ -103,22 +110,37 @@ export default function Home() {
       <div className="text-center mb-1 text-white pt-1">
         <div className="mb-2 flex justify-center">
           <img 
+<<<<<<< HEAD
             src="/images/bannertogel1.png" 
+=======
+            src="/images/bannertogel.webp" 
+>>>>>>> d9b09ce (Initial commit)
             alt="Banner Togel" 
             className="w-full max-w-2xl object-contain drop-shadow-lg"
             style={{ 
               filter: 'drop-shadow(0 4px 6px rgba(1, 10, 20, 0.4)) drop-shadow(0 0 2px rgba(228, 237, 237, 0.2))',
+<<<<<<< HEAD
               border: '2px solid #FF8C00',
+=======
+              border: 'none',
+>>>>>>> d9b09ce (Initial commit)
               borderRadius: '10px',
               padding: '0px'
             }}
           />
         </div>
 
+<<<<<<< HEAD
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2 whitespace-nowrap">PREDIKSI TOGEL HARIAN</h1>
         <p style={{ color: '#FF8C00', fontSize: '1.25rem', fontWeight: 'bold' }}>Aplikasi Hiburan & Analisis Statistik</p>
         {todayDate && (
           <p className="text-xs mt-2" style={{ color: '#F8F8F8' }}>
+=======
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2" style={{ color: '#1bc4a5' }}> PREDIKSI TOGEL HARIAN</h1>
+        <p style={{ color: '#6da99565', fontSize: '1.15rem', fontWeight: 'bold' }}>Aplikasi Hiburan & Analisis Statistik</p>
+        {todayDate && (
+          <p className="text-xs mt-2" style={{ color: '#36b79d' }}>
+>>>>>>> d9b09ce (Initial commit)
              Menampilkan Prediksi untuk: {new Date(todayDate).toLocaleDateString('id-ID', { 
               weekday: 'long', 
               year: 'numeric', 
@@ -219,7 +241,11 @@ export default function Home() {
         </>
       )}
 
+<<<<<<< HEAD
       <div className="mt-16 text-center text-white text-sm border-t border-orange-500 pt-8 pb-8">
+=======
+      <div className="mt-16 text-center text-white text-sm border-t border-turquoise pt-8 pb-8">
+>>>>>>> d9b09ce (Initial commit)
         <p className="mb-2">© 2026 Kalender Prediksi - Aplikasi Hiburan & Analisis Statistik</p>
         <p className="text-xs text-white/75">Data ditampilkan untuk tujuan analisis dan hiburan semata</p>
       </div>
