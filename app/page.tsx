@@ -72,7 +72,7 @@ export default function Home() {
   }
 
   return (
-    <main className="container-main">
+    <main className="container-main pt-8">
       <PredictionGuideModal isOpen={showGuideModal} onClose={() => setShowGuideModal(false)} />
 
       <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />
@@ -217,11 +217,7 @@ export default function Home() {
         </>
       )}
 
-<<<<<<< HEAD
-      <div className="mt-16 text-center text-white text-sm border-t border-turquoise pt-8 pb-8">
-=======
-      <div className="mt-16 text-center text-white text-sm border-t border-turquoise pt-8 pb-8">
->>>>>>> d9b09ce (Initial commit)
+  <div className="mt-16 text-center text-white text-sm border-t border-turquoise pt-8 pb-8">
         <p className="mb-2">© 2026 Kalender Prediksi - Aplikasi Hiburan & Analisis Statistik</p>
         <p className="text-xs text-white/75">Data ditampilkan untuk tujuan analisis dan hiburan semata</p>
       </div>

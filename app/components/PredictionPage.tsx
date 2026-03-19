@@ -74,7 +74,7 @@ export default function PredictionPage({ pasaranId, pasaranName }: PredictionPag
 
       {/* Header dengan Logo dan Hamburger Button */}
       {!showGuideModal && !showAboutModal && !showHelpModal && (
-        <div className="flex justify-between items-center mb-0 -mt-4 px-2 relative">
+        <div className="flex justify-between items-center mb-0 -mt-0 px-2 pt-4 relative">
           {/* Back Button */}
           <Link href="/" className="p-2.5 rounded-lg transition-all duration-300 hover:scale-110"
             style={{ background: 'linear-gradient(135deg, rgba(9, 59, 54, 0.85) 0%, rgba(35, 206, 189, 0.9) 100%)', borderColor: 'rgba(0, 255, 234, 0.5)' }}>
